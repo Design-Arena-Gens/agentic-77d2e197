@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chinese Art Taken in the 19th–20th Centuries | European Museums</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <h1>European Museums Holding Chinese Objects Taken in the 19th–20th Centuries</h1>
+        <p>
+          A reference guide to public institutions in Europe that document Chinese works acquired during
+          the Opium Wars (1839–1860), the Boxer Rebellion (1899–1901), and related imperial campaigns.
+          Data compiled from museum collection notes, restitution dossiers, and published historical
+          research.
+        </p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="filters" aria-label="Filters">
+        <label class="filters__label" for="countryFilter">Filter by country</label>
+        <select id="countryFilter">
+          <option value="all">All countries</option>
+        </select>
+      </section>
+
+      <section class="legend" aria-label="Legend">
+        <div class="legend__item">
+          <span class="legend__pill legend__pill--opium"></span>
+          <span>Second Opium War (1856–1860)</span>
+        </div>
+        <div class="legend__item">
+          <span class="legend__pill legend__pill--boxer"></span>
+          <span>Boxer Rebellion (1899–1901)</span>
+        </div>
+        <div class="legend__item">
+          <span class="legend__pill legend__pill--other"></span>
+          <span>Other 19th–20th century coercive campaigns</span>
+        </div>
+      </section>
+
+      <section class="cards" id="museumCards" aria-live="polite"></section>
+
+      <section class="sources" aria-label="Sources & Methodology">
+        <h2>Sources &amp; Methodology</h2>
+        <p>
+          Listings emphasize museums that publicly acknowledge Chinese holdings taken during the
+          Anglo-French looting of the Yuanmingyuan (Old Summer Palace), the Eight-Nation Alliance
+          campaign, and related punitive expeditions. Source material includes collection catalogues,
+          internal provenance statements, restitution reports, and investigative journalism.
+        </p>
+        <p class="disclaimer">
+          Provenance investigations are ongoing. Presence in this list does not necessarily mean every
+          Chinese object in the collection was taken illicitly; instead, it reflects institutional records
+          documenting at least part of the holdings as seized or distributed from military expeditions.
+        </p>
+      </section>
+    </main>
+
+    <template id="museumCardTemplate">
+      <article class="card">
+        <header class="card__header">
+          <div>
+            <h3 class="card__title"></h3>
+            <p class="card__location"></p>
+          </div>
+          <span class="card__country"></span>
+        </header>
+        <section class="card__body">
+          <p class="card__summary"></p>
+          <ul class="card__highlights"></ul>
+        </section>
+        <footer class="card__footer">
+          <h4>Primary acquisition events</h4>
+          <ul class="card__events"></ul>
+          <h4>Key references</h4>
+          <ul class="card__references"></ul>
+        </footer>
+      </article>
+    </template>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
